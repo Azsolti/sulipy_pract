@@ -83,4 +83,4 @@ min_yy = min(min_y)
 max_xx = max(max_x)
 max_yy = max(max_y)
 
-print("Bal alsó: "min_xx, min_yy," Jobb felsö:", max_xx, max_yy)
+print("Bal alsó: ", min_xx, min_yy, " Jobb felsö:", max_xx, max_yy)
