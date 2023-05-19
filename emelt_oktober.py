@@ -38,7 +38,8 @@ from datetime import timedelta
 
 
 def eltelt(time1_id, time2_id):
-    
+    """ Creating time variables for the delta function from the dictionary values. time1_id is the key, from the func argument, hour-minuts is just the
+    index variable above """
     
     t1_hour = jel_data_dict[time1_id][hour]
     t1_minute = jel_data_dict[time1_id][minute]
