@@ -1,9 +1,13 @@
-arr = "ABCDEFGHIJKLMNOPQRSTUVWXY"
-arr_2 = "CWMFJORDBANKGLYPHSVEXTQUI"
-matrix = [[arr[i*5 + j] for j in range(5)] for i in range(5)]
-matrix_2 = [[arr_2[i*5 + j] for j in range(5)] for i in range(5)]
+import math
+arr = "ABCD"
+arr_2 = "ABMD"
+sqr = math.sqrt(len(arr))
+sqr = int(sqr)
 
-def moves():
+matrix = [[arr[i*sqr + j] for j in range(sqr)] for i in range(sqr)]
+matrix_2 = [[arr_2[i*sqr + j] for j in range(sqr)] for i in range(sqr)]
+
+def calc_moves():
     moves = []
     indexes = {}
     indexes_2 = {}
@@ -19,14 +23,12 @@ def moves():
   
     for k,v in indexes.items():
      
- 
         if indexes_2[k] == v:
             
             pass
 
         else:
-            print(indexes_2[k], indexes[k])
-            
+           
             if counter == 1:
 
                 diff_col = indexes[k][0] - indexes_2[k][0]
@@ -53,6 +55,31 @@ def moves():
                         moves.append(f"R{indexes[k][0]}")
             counter += 1
     return moves
+    
+def final_moves(calc_moves, matrix, matrix_2):
+    
+    temp = []
+    for item in calc_moves:
+        
+        direction = item[0]
+        index = item[1]
+
+        def move_up(matrix_2):
+            
+            for col in matrix_2:
+                print("Column:", col)
+                print("Need to remove : ", col[int(index)])
+                
+                
+                
+        if direction == "U":
+           print("UPPPPP")
+           
+           move_up(matrix_2)
+                
+                
+    
+final_moves(calc_moves(), matrix, matrix_2)
 
                  
 moves()
